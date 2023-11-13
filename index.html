@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Thrwty...Coming Soon!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="img/logo.png" alt="Tharwty Logo">
+    </header>
+
+    <div class="container">
+      <div class="title">Get Ready for <br> Something <span>Big</span></div>
+      <div class="text">
+        Get ready to embark on a journey that will transform your professional life.  our launch is just around the corner. Stay Tuned, and you’ll be among the first to experience the future of job searching
+      </div>
+
+      <div class="counter">
+        <div id="days">36</div>
+        <div id="hours">14</div>
+        <div id="minutes">53</div>
+        <div id="seconds">25</div>
+      </div>
+
+      <div class="progress-bar">
+        <span class="pb-text">COMING SOON </span>
+        <span class="bg" id="progress-bar-bg"></span>
+      </div>
+
+
+      <div class="contactus">
+        <a href="https://www.linkedin.com/company/tharwah/life/consulting/"> <img class="img-2" src="img/linkedin.png"> </a>
+        <a href="https://www.instagram.com/tharwah.hr/"> <img class="img-2" src="img/instagram.png" /></a>
+        <a href="https://twitter.com/Tharwah_Company"> <img class="img-2" src="img/twitter.png" /></a>
+        <a href="https://www.youtube.com/channel/UCsy6eUHH1IpR3InHyhY0EKw?view_as=subscriber"> <img class="img-2" src="img/youtube.png" /></a>
+      </div>
+
+      <script>
+      function updateCountdown() {
+        const futureTime = new Date("2024-01-01T00:00:00Z"); // Replace with your desired future time
+        const currentTime = new Date();
+        const startTime = new Date("2023-06-20T00:00:00Z");
+
+        const timeDifference = futureTime - currentTime;
+
+        const daysElement = document.getElementById("days");
+        const hoursElement = document.getElementById("hours");
+        const minutesElement = document.getElementById("minutes");
+        const secondsElement = document.getElementById("seconds");
+
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+        daysElement.textContent = days < 10 ? `0${days}`: days;;
+        hoursElement.textContent = hours < 10 ? `0${hours}`: hours;;
+        minutesElement.textContent = minutes < 10 ? `0${minutes}`: minutes;;
+        secondsElement.textContent = seconds < 10 ? `0${seconds}`: seconds;
+
+
+        // update progress bar
+        const totalDuration = futureTime - startTime;
+        const elapsedTime = currentTime - startTime;
+        const percentage = (elapsedTime / totalDuration) * 100;
+        const progressBar = document.getElementById('progress-bar-bg');
+        progressBar.style.width = `${percentage.toFixed(2)}%`
+
+
+        }
+
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+      </script>
+
+
+    </div>
+
+  </body>
+</html>

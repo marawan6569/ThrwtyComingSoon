@@ -1,0 +1,302 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  font-family: Bahij Janna;
+
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+
+@font-face {
+  font-family: "Bahij Janna";
+  src: url("https://anima-uploads.s3.amazonaws.com/5d1ca6d31099761320c6a9f2/font-bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Bahij Janna";
+  src: url("https://anima-uploads.s3.amazonaws.com/5d1ca6d31099761320c6a9f2/ar.ttf") format("truetype");
+  font-weight: normal;
+}
+
+
+
+/* *
+{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+} */
+
+body
+{
+  background-color: #0c0c11;
+  background-image: url("img/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 1134px;
+  overflow-x: hidden;
+
+  /* background-position: 50% 50% */
+}
+
+header
+{
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  border-bottom: 2px solid #FFFFFF20;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+
+.logo
+{
+  width: 137px;
+}
+
+.container
+{
+  /* width: 45vw;
+  height: 45vw; */
+  /* background: #FFFFFF20; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-52%, -13%);
+  /* border-radius: 50%; */
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title
+{
+  color: #FFF;
+  font-family: Bahij Janna;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 70px;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+  margin-top: 50px
+}
+
+.title > span { color: #BDBDF0; }
+
+.text
+{
+  color: rgba(255, 255, 255, 0.70);
+  text-align: center;
+  font-family: Bahij Janna;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 141.176% */
+  text-transform: capitalize;
+  padding: 10px 120px;
+  margin-top: 10px;
+}
+
+
+.counter
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 25px;
+}
+
+.counter > div
+{
+  color: #FFF;
+  font-family: Bahij Janna;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  position: relative;
+}
+
+.counter > div::after
+{
+  content: ":";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(50%, -55%);
+}
+
+.counter > div::before
+{
+  content: "test";
+  font-size: 15px;
+  font-weight: 400;
+  position: absolute;
+  top: 10%;
+  left: 0%;
+  transform: translate(0%, -120%);
+}
+
+
+#seconds::after{ content: "" }
+#days::before{ content: "Days"; left: 25%;}
+#hours::before{ content: "Hours"; left: 10%; }
+#minutes::before{ content: "Minutes" }
+#seconds::before{ content: "Seconds" }
+
+
+
+.progress-bar
+{
+  border-radius: 60px;
+  border: 1px solid #FFF;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 5px;
+  width: 35%;
+  position: relative;
+  margin-top: 10px;
+}
+
+.progress-bar > .pb-text
+{
+  color: #FFF;
+  font-family: Bahij Janna;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  position: absolute;
+    top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  mix-blend-mode: difference;
+}
+
+.progress-bar > .bg
+{
+  border-radius: 60px;
+  border: 1px solid #FFF;
+  background: #FFF;
+  display: block;
+  width: 68%;
+  height: 30px;
+}
+
+.contactus
+{
+  display: flex;
+  flex-direction: row;
+  gap:20px;
+  margin-top: 60px;
+}
+
+
+
+/* LG screens (large desktops) */
+@media screen and (min-width: 1200px) {
+  /* CSS rules for LG screens */
+}
+
+/* MD screens (desktops) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  /* CSS rules for MD screens */
+  body
+  {
+    background-image: url("img/background_md.png");
+  }
+  .container
+  {
+    transform: translate(-50%, -10%);
+  }
+  .title
+  {
+    font-size: 44px;
+  }
+  .text
+  {
+    margin: 0;
+    padding: 10px 20px;
+  }
+  .pb-text
+  {
+    font-size: 18px;
+  }
+}
+
+/* SM screens (tablets) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /* CSS rules for SM screens */
+
+  body
+  {
+    background-image: url("img/background_md.png");
+  }
+  .container
+  {
+    transform: translate(-48%, -20%);
+  }
+  .title
+  {
+    font-size: 44px;
+  }
+  .text
+  {
+    margin: 0;
+    padding: 10px 20px;
+  }
+  .pb-text
+  {
+    font-size: 16px !important;
+  }
+
+}
+
+/* XS screens (mobile devices) */
+@media screen and (max-width: 767px) {
+  /* CSS rules for XS screens */
+  body
+  {
+    background-image: url("img/background_md.png");
+  }
+
+  .container
+  {
+    transform: translate(-48%, -40%);
+  }
+
+  .title
+  {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .text
+  {
+    margin: 0;
+    padding: 10px 0;
+  }
+
+  .progress-bar
+  {
+    width: 80%;
+  }
+
+
+  .pb-text
+  {
+    font-size: 16px;
+  }
+
+}
